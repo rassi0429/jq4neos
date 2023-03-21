@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.listen(3000, () => console.log("server running on port 3000"))
 
-app.get("/v1/jq", async (req, res) => {
+app.post("/v1/jq", async (req, res) => {
     const query = req.query.q
     const returnJson = boolean(req.query.json)
     const json = req.body
